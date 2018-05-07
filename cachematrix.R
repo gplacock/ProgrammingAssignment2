@@ -46,7 +46,10 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 ## Function 'cacheSolve' returns a matrix which is the inverse
-## of the matrix passed to function makeCacheMatrix.
+## of the matrix passed to function makeCacheMatrix. If the inverse
+## for the current matrix has already been calculate and cached, the
+## result is returned from the cache. Otherwise the result is
+## calculated, and cached.
 
 cacheSolve <- function(x) {
     ## Argument 'x' is a function of type makeCacheMatrix.
